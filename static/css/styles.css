@@ -11,3 +11,20 @@ footer {
 #logo {
   color: #DC980A;
 }
+
+#logod {
+  color: #DC980A;
+}
+
+#img-div {
+  overflow: hidden;
+}
+
+#img-bus {
+  height: 100px;
+}
+
+.music {
+  position: absolute;
+  left: 0;
+}

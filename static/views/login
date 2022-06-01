@@ -1,0 +1,32 @@
+<section>
+    <div class="container row px-4 py-5 mx-auto">
+        <div class="col-sm-10 col-md-8 col-lg-6 mx-auto">
+            <form action="http://localhost:3000/login_student" method="post"
+                class="p-4 p-md-5 border bg-light rounded-lg">
+                <div>
+                    <input type="email" class="form-control form-control-lg" id="email" name="email"
+                        placeholder="Usuário">
+                    <label for="email">Usuário</label>
+                </div>
+                <div>
+                    <input type="password" class="form-control form-control-lg" id="password" name="password"
+                        placeholder="Senha">
+                    <label for="password">Senha</label>
+                </div>
+                <div class="form-check mb-3 text-dark">
+                    <input class="form-check-input" type="radio" name="checkbox" id="">
+                    <label for="checkbox">Aluno</label>
+                    <input class="form-check-input" type="radio" name="checkbox" id="">
+                    <label for="checkbox">Motorista</label>
+                    <input class="form-check-input" type="radio" name="checkbox" id="">
+                    <label for="checkbox">Instituição</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                    <label class="form-check-label" for="flexRadioDefault1">Default radio</label>
+                </div>
+                <button class="w-100 btn btn-lg btn-primary mb-4" type="submit">Entrar</button>
+            </form>
+        </div>
+    </div>
+</section>

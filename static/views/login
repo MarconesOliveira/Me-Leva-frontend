@@ -13,18 +13,6 @@
                         placeholder="Senha">
                     <label for="password">Senha</label>
                 </div>
-                <div class="form-check mb-3 text-dark">
-                    <input class="form-check-input" type="radio" name="checkbox" id="">
-                    <label for="checkbox">Aluno</label>
-                    <input class="form-check-input" type="radio" name="checkbox" id="">
-                    <label for="checkbox">Motorista</label>
-                    <input class="form-check-input" type="radio" name="checkbox" id="">
-                    <label for="checkbox">Instituição</label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                    <label class="form-check-label" for="flexRadioDefault1">Default radio</label>
-                </div>
                 <button class="w-100 btn btn-lg btn-primary mb-4" type="submit">Entrar</button>
             </form>
         </div>

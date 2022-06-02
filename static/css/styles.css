@@ -23,13 +23,3 @@ footer {
 #img-bus {
   height: 100px;
 }
-
-.music {
-  position: absolute;
-  left: 0;
-}
-
-.login-button {
-  position: absolute;
-  right: 0;
-}

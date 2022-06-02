@@ -1,0 +1,21 @@
+{
+  "name": "me_leva_frontend",
+  "version": "1.0.0",
+  "description": "FrontEnd do Sistema Me_Leva",
+  "main": "index.html",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MarconesOliveira/Me-Leva-frontend.git"
+  },
+  "keywords": [
+    "Transporte_Escolar",
+    "Me_Leva"
+  ],
+  "author": "MarconesOliveira, wesleycz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MarconesOliveira/Me-Leva-frontend/issues"
+  },
+  "homepage": "https://github.com/MarconesOliveira/Me-Leva-frontend#readme"
+}

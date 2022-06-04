@@ -1,6 +1,6 @@
 <div class="container row px-4 py-3 mx-auto">
     <div class="col-sm-10 col-md-8 col-lg-6 mx-auto">
-        <form action="http://localhost:3000/signup_institution" class="p-4 p-md-5 bg-light rounded"
+        <form action="https://me-leva-backend.herokuapp.com/signup_institution/" class="p-4 p-md-5 bg-light rounded"
             id="form-register-institution">
             <div class="form-floating text-muted mb-3">
                 <input type="text" class="form-control form-control-lg" id="name" name="name"

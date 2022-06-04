@@ -1,18 +1,16 @@
-<section id="root">
-    <div class="container row align-items-center mb-5 mx-auto">
-        <div class="col-lg-6 my-3">
-            <h1 class="display-4">Bem vindo ao <span id="logod">_Me_Leva</span></h1>
-            <p class="lead">
-                Este é um sistema desenvolvido para auxiliar quem precisa de transporte público para ter acesso a
-                Educação.
-            </p>
-            <p class="lead">
-                Por meio do compartilhamento de informações, ajudamos jovens e adultos a encontrar seus caminhos até o
-                futuro!
-            </p>
-        </div>
-        <div class="col-lg-6 my-3">
-            <img src="./static/img/map.png" class="img-fluid rounded-lg shadow-lg" alt="Mapa de Cajazeiras e Região">
-        </div>
+<div class="container row align-items-center mb-5 mx-auto">
+    <div class="col-lg-6 my-3">
+        <h1 class="display-4">Bem vindo ao <span id="logod">_Me_Leva</span></h1>
+        <p class="lead">
+            Este é um sistema desenvolvido para auxiliar quem precisa de transporte público para ter acesso a
+            Educação.
+        </p>
+        <p class="lead">
+            Por meio do compartilhamento de informações, ajudamos jovens e adultos a encontrar seus caminhos até o
+            futuro!
+        </p>
     </div>
-</section>
+    <div class="col-lg-6 my-3 overflow-hidden shadow-lg">
+        <div id="map"></div>
+    </div>
+</div>

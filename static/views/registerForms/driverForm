@@ -1,40 +1,38 @@
-<section>
-    <div class="container row px-4 py-3 mx-auto">
-        <div class="col-sm-10 col-md-8 col-lg-6 mx-auto">
-            <form action="http://localhost:3000/signup_institution" class="p-4 p-md-5 bg-light rounded"
-                id="form-register-institution">
-                <div class="form-floating text-muted mb-3">
-                    <input type="text" class="form-control form-control-lg" id="name" name="name"
-                        placeholder="Nome do Motorista" required>
-                    <label for="name">Nome do Motorista</label>
-                </div>
-                <div class="form-floating text-muted mb-3">
-                    <input type="email" class="form-control form-control-lg" id="email" name="email" placeholder="Email"
-                        required>
-                    <label for="email">Email</label>
-                </div>
-                <div class="form-floating text-muted mb-3">
-                    <input type="password" class="form-control form-control-lg" id="password" name="password"
-                        placeholder="Senha" required>
-                    <label for="password">Senha</label>
-                </div>
-                <div class="form-floating text-muted mb-3">
-                    <input type="text" class="form-control form-control-lg" id="CPF_number" name="CPF_number"
-                        placeholder="CPF" required>
-                    <label for="CPF_number">CPF</label>
-                </div>
-                <div class="form-floating text-muted mb-3">
-                    <input type="tel" class="form-control form-control-lg" id="phone" name="phone" placeholder="Telefone">
-                    <label for="phone">Telefone</label>
-                </div>
-                <div class="form-floating text-muted mb-3">
-                    <input type="text" class="form-control form-control-lg" id="city" name="city"
-                        placeholder="Sua cidade" required>
-                    <label for="city">Sua cidade</label>
-                </div>
-                <button class="w-100 btn btn-lg btn-primary mt-3" type="submit">Cadastrar Motorista</button>
-                <button class="w-100 btn btn-lg btn-secondary mt-3" onclick="changeSection('register')">Voltar</button>
-            </form>
-        </div>
+<div class="container row px-4 py-3 mx-auto">
+    <div class="col-sm-10 col-md-8 col-lg-6 mx-auto">
+        <form action="http://localhost:3000/signup_institution" class="p-4 p-md-5 bg-light rounded"
+            id="form-register-institution">
+            <div class="form-floating text-muted mb-3">
+                <input type="text" class="form-control form-control-lg" id="name" name="name"
+                    placeholder="Nome do Motorista" required>
+                <label for="name">Nome do Motorista</label>
+            </div>
+            <div class="form-floating text-muted mb-3">
+                <input type="email" class="form-control form-control-lg" id="email" name="email" placeholder="Email"
+                    required>
+                <label for="email">Email</label>
+            </div>
+            <div class="form-floating text-muted mb-3">
+                <input type="password" class="form-control form-control-lg" id="password" name="password"
+                    placeholder="Senha" required>
+                <label for="password">Senha</label>
+            </div>
+            <div class="form-floating text-muted mb-3">
+                <input type="text" class="form-control form-control-lg" id="CPF_number" name="CPF_number"
+                    placeholder="CPF" required>
+                <label for="CPF_number">CPF</label>
+            </div>
+            <div class="form-floating text-muted mb-3">
+                <input type="tel" class="form-control form-control-lg" id="phone" name="phone" placeholder="Telefone">
+                <label for="phone">Telefone</label>
+            </div>
+            <div class="form-floating text-muted mb-3">
+                <input type="text" class="form-control form-control-lg" id="city" name="city" placeholder="Sua cidade"
+                    required>
+                <label for="city">Sua cidade</label>
+            </div>
+            <button class="w-100 btn btn-lg btn-primary mt-3" type="submit">Cadastrar Motorista</button>
+            <button class="w-100 btn btn-lg btn-secondary mt-3" onclick="changeSection('register')">Voltar</button>
+        </form>
     </div>
-</section>
+</div>

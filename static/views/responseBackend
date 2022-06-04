@@ -1,0 +1,9 @@
+<div class="container row align-items-center mb-5 mx-auto">
+    <div class="col-lg-6 my-3">
+        <h3>Página genérica de resposta do Backend</h3>
+    </div>
+    <div class="col-lg-6 my-3 msg">
+        <h5>Mensagem do Servidor</h5>
+        <p>Texto a ser substituido</p>
+    </div>
+</div>

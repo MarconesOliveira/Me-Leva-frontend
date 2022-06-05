@@ -12,20 +12,22 @@ const listenForm = async (path = '', idSelected = '') => {
 
             formData = new FormData(form);
             const formDataJSON = Object.fromEntries(formData.entries());
-            
-            if(form.id === 'form-register-institution') {path = 'signup_institution'; idSelected = '';}
-            if(form.id === 'form-register-student') {path = 'signup_student'; idSelected = formDataJSON.select_institution;}
-            if(form.id === 'form-register-driver') {path = 'signup_driver'; idSelected = formDataJSON.select_institution;}
+
+            let formID = form.id;
+            if(formID === 'form-register-institution') {path = 'signup_institution';}
+            else if(formID === 'form-register-student') {path = 'signup_student'; idSelected = formDataJSON.select_institution;}
+            else if(formID === 'form-register-driver') {path = 'signup_driver'; idSelected = formDataJSON.select_institution;}
+            else if(formID === 'form-login') {path = `login_${form.loginTypeSelector.value}`; formID += `-${form.loginTypeSelector.value}`; delete formDataJSON['loginTypeSelector'];}
             
             delete formDataJSON['select_institution'];
-            
+
             try {
                 fetch(`${links.server}/${path}/${idSelected}`, {
                     method: 'post',
                     headers: { "Content-type": "application/json;charset=UTF-8" },
                     body: JSON.stringify(formDataJSON)
                 }).then(res => res.json()).then(res => {
-                    handleResponse(res, form.id);
+                    handleResponse(res, formID);
                 });
             } catch (error) {
                 console.log(error);

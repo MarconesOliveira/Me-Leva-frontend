@@ -19,7 +19,7 @@ const listenForm = async (path = '', idSelected = '') => {
             else if(formID === 'form-register-student') {path = 'signup_student'; idSelected = formDataJSON.select_institution; delete formDataJSON['select_institution'];}
             else if(formID === 'form-register-driver') {path = 'signup_driver'; idSelected = formDataJSON.select_institution; delete formDataJSON['select_institution'];}
             else if(formID === 'form-login') {path = `login_${form.loginTypeSelector.value}`; formID += `-${form.loginTypeSelector.value}`; delete formDataJSON['loginTypeSelector'];}
-            else if(formID === 'form-logged-student') {path = 'localiztion_student'; idSelected = getToken().token; requestMethod = 'PUT';}
+            else if(formID === 'form-logged-student') {path = 'localiztion_student'; idSelected = getToken().token;}
             else if(formID === 'form-logged-driver') {path = 'localiztion_driver'; idSelected = getToken().token; requestMethod = 'PUT';}
 
             try {

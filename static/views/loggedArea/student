@@ -1,12 +1,12 @@
 <div class="container row px-4 py-3 mx-auto">
-    <div class="col-md-12 col-lg-10 mx-auto">
-        <div id="msg"></div>
+    <div class="col-md-12 col-lg-10 mx-auto" id="div-student">
         <div>
             <h3 id="logod">Estudante</h3>
             <p class="lead mb-5">Insira no mapa a sua localização e clique em "Enviar minha localização"</p>
         </div>
         <div class="container">
             <div id="map" class="mb-5"></div>
+            <div id="msg"></div>
             <div>
                 <form class="my-3 p-1 p-md-2 bg-light rounded w-50 mx-auto" id="form-logged-student">
                     <div class="d-flex mx-auto">
@@ -22,8 +22,8 @@
                         </div>
                     </div>
                     <button class="w-100 btn btn-lg btn-primary my-1" type="submit">Enviar minha localização</button>
-                    <button class="w-100 btn btn-lg btn-secondary" onclick="logOut()">Sair</button>
                 </form>
+                <button class="w-50 btn btn-lg btn-secondary" onclick="logOut()">Sair</button>
             </div>
         </div>
     </div>

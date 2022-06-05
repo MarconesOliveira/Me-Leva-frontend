@@ -7,12 +7,10 @@ const saveToken = (key, token) => {
 }
 
 const getToken = () => {
-    return JSON.parse(localStorage.getItem('token_me_leva'));
+    return JSON.parse(localStorage.getItem('token_me_leva')) || false;
 }
 
 const logOut = () => {
     localStorage.removeItem('token_me_leva');
     changeSection('home');
 }
-
-logOut();

@@ -2,7 +2,7 @@ const handleResponse = async (response, formId) => {
     const typeForm = formId.split('-');
     if (typeForm[1] === 'register') {responseRegister(response); return;}
     if (typeForm[1] === 'login') {responseLogin(response, typeForm[2]);}
-    if (typeForm[1] === 'logged') {responseStudentLogged(response, typeForm[2]); return;}
+    if (typeForm[1] === 'logged') {responseLogged(response, typeForm[2]); return;}
 }
 
 const responseRegister = async(response) => {
@@ -30,20 +30,23 @@ const responseRegister = async(response) => {
 const responseLogin = async (response, actor) => {
     await changeSection(`loggedArea/${actor}`).then(() => {
         if(response.has_error){
+            const div = document.querySelector(`#div-${actor}`);
             div.innerHTML = `<h1 class="display-3">${response.data}</h1>`;
             return;
         }
+        const header = document.querySelector('#nav-bar');
+        header.innerHTML = '';
         saveToken(actor, response.data);
-        generateAuthPage();
+        initMapStudent();
     });
 }
 
-const responseStudentLogged = (response, actor) => {
-    const div = document.querySelector('#msg');
+const responseLogged = (response, actor) => {
     if(response.has_error){
         div.innerHTML = `<h1 class="display-3">Erro: ${response.data}</h1>`;
         return;
     }
+    const div = document.querySelector('#msg');
     console.log(response);
     div.innerHTML = '<h1>Localização atualizada!</h1>'
 }

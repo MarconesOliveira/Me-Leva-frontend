@@ -32,3 +32,7 @@ footer {
 #map {
   height: 300px;
 }
+
+span:hover {
+  cursor: pointer;
+}

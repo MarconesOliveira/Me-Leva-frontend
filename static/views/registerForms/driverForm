@@ -1,7 +1,7 @@
 <div class="container row px-4 py-3 mx-auto">
     <div class="col-sm-10 col-md-8 col-lg-6 mx-auto">
-        <form action="https://me-leva-backend.herokuapp.com/signup_driver/9bd6afaa-a937-48bb-9b02-5ed026f4b804" class="p-4 p-md-5 bg-light rounded"
-            id="form-register-institution">
+        <form class="p-4 p-md-5 bg-light rounded"
+            id="form-register-driver">
             <div class="form-floating text-muted mb-3">
                 <input type="text" class="form-control form-control-lg" id="name" name="name"
                     placeholder="Nome do Motorista" required>
@@ -30,6 +30,10 @@
                 <input type="text" class="form-control form-control-lg" id="city" name="city" placeholder="Sua cidade"
                     required>
                 <label for="city">Sua cidade</label>
+            </div>
+            <div>
+                <h6 class="text-muted">Sua Instituição</h6>
+                <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg" id="select_institution" name="select_institution" required></select>
             </div>
             <button class="w-100 btn btn-lg btn-primary mt-3" type="submit">Cadastrar Motorista</button>
             <button class="w-100 btn btn-lg btn-secondary mt-3" onclick="changeSection('register')">Voltar</button>

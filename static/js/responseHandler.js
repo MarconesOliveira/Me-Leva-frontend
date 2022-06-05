@@ -2,6 +2,7 @@ const handleResponse = async (response, formId) => {
     const typeForm = formId.split('-');
     if (typeForm[1] === 'register') {responseRegister(response); return;}
     if (typeForm[1] === 'login') {responseLogin(response, typeForm[2]);}
+    if (typeForm[1] === 'logged') {responseStudentLogged(response, typeForm[2]); return;}
 }
 
 const responseRegister = async(response) => {
@@ -9,7 +10,10 @@ const responseRegister = async(response) => {
         const div = document.querySelector('#msg');
 
         if(response.has_error){
-            div.innerHTML = response.data;
+            div.innerHTML = `
+            <h1 class="display-3>Error:</h1>
+            <h3 class="display-5">${response.data}</h3>
+            `;
             return;
         }
 
@@ -25,15 +29,21 @@ const responseRegister = async(response) => {
 
 const responseLogin = async (response, actor) => {
     await changeSection(`loggedArea/${actor}`).then(() => {
-        const div = document.querySelector('#msg');
-
         if(response.has_error){
-            div.innerHTML = `<h1 class="display-3">${response.data}</h1>`
+            div.innerHTML = `<h1 class="display-3">${response.data}</h1>`;
             return;
         }
-        console.log(response);
-        div.innerHTML = `
-            <div class="display-2" id="logod"><span>Login concluído!</span></div>
-        `;
+        saveToken(actor, response.data);
+        generateAuthPage();
     });
+}
+
+const responseStudentLogged = (response, actor) => {
+    const div = document.querySelector('#msg');
+    if(response.has_error){
+        div.innerHTML = `<h1 class="display-3">Erro: ${response.data}</h1>`;
+        return;
+    }
+    console.log(response);
+    div.innerHTML = '<h1>Localização atualizada!</h1>'
 }

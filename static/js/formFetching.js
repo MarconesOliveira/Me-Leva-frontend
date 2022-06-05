@@ -14,16 +14,17 @@ const listenForm = async (path = '', idSelected = '') => {
             const formDataJSON = Object.fromEntries(formData.entries());
 
             let formID = form.id;
-            if(formID === 'form-register-institution') {path = 'signup_institution';}
-            else if(formID === 'form-register-student') {path = 'signup_student'; idSelected = formDataJSON.select_institution;}
-            else if(formID === 'form-register-driver') {path = 'signup_driver'; idSelected = formDataJSON.select_institution;}
+            let requestMethod = 'POST';
+            if(formID === 'form-register-institution') {path = 'signup_institution'; delete formDataJSON['select_institution'];}
+            else if(formID === 'form-register-student') {path = 'signup_student'; idSelected = formDataJSON.select_institution; delete formDataJSON['select_institution'];}
+            else if(formID === 'form-register-driver') {path = 'signup_driver'; idSelected = formDataJSON.select_institution; delete formDataJSON['select_institution'];}
             else if(formID === 'form-login') {path = `login_${form.loginTypeSelector.value}`; formID += `-${form.loginTypeSelector.value}`; delete formDataJSON['loginTypeSelector'];}
-            
-            delete formDataJSON['select_institution'];
+            else if(formID === 'form-logged-student') {path = 'localiztion_student'; idSelected = getToken().token; requestMethod = 'PUT';}
+            else if(formID === 'form-logged-driver') {path = 'localiztion_driver'; idSelected = getToken().token; requestMethod = 'PUT';}
 
             try {
                 fetch(`${links.server}/${path}/${idSelected}`, {
-                    method: 'post',
+                    method: requestMethod,
                     headers: { "Content-type": "application/json;charset=UTF-8" },
                     body: JSON.stringify(formDataJSON)
                 }).then(res => res.json()).then(res => {
@@ -49,7 +50,6 @@ const fetchInstitutions = async () => {
             response.data.forEach(element => {
                 list_institution.innerHTML += `<option value="${element.id}">${element.name}</option>`;
             });
-
         })
     } catch (error) {
         console.log(error);

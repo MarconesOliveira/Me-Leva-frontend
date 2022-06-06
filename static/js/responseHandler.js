@@ -61,8 +61,8 @@ const responseLogged = (response, actor) => {
         let students = '';
         response.data.forEach(element => {
             students += element.name + '  ';
-            drawStudentOnMap(element);
         })
+        drawStudentsOnMap(response.data);
         div.innerHTML = `
         <h1 class="display-5">Localização atualizada!</h1>
         <h3 class="lead">Os alunos estão esperando por você:</h3>

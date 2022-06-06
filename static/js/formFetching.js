@@ -76,6 +76,7 @@ const fetchInstitutionsLocation = async (map) => {
                     title: element.name,
                     map: map,
                     icon: svg,
+                    animation: google.maps.Animation.DROP,
                 });
             });
 

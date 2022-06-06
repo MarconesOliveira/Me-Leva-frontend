@@ -1,5 +1,5 @@
 const links = {
-    "server":"http://localhost:3000"
+    "server":"https://me-leva-b.herokuapp.com"
 }
 
 const listenForm = async (path = '', idSelected = '') => {

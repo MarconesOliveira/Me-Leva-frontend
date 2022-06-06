@@ -23,6 +23,7 @@
                     </div>
                     <button class="w-100 btn btn-lg btn-primary my-1" type="submit">Enviar minha localização</button>
                 </form>
+                <button class="w-50 btn btn-lg btn-danger mb-3" onclick="confirmTravel('false')">Não vou hoje</button>
                 <button class="w-50 btn btn-lg btn-secondary" onclick="logOut()">Sair</button>
             </div>
         </div>

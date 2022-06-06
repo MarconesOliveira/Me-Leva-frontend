@@ -42,11 +42,32 @@ const responseLogin = async (response, actor) => {
 }
 
 const responseLogged = (response, actor) => {
+    const div = document.querySelector('#msg');
     if(response.has_error){
         div.innerHTML = `<h1 class="display-3">Erro: ${response.data}</h1>`;
         return;
     }
-    const div = document.querySelector('#msg');
-    console.log(response);
-    div.innerHTML = '<h1>Localização atualizada!</h1>'
+    if (actor === 'student') {
+        div.innerHTML = `
+        <h1 class="display-5">Localização atualizada!</h1>
+        <h3 class="lead">O <span class="logo-color">motorista ${response.data[0].name}</span> é o responsável pela sua região.</h3>
+    `;
+    console.log(response.data[0]);
+    drawDriverOnMap(response.data[0]);
+    confirmTravel('true');
+    return;
+    }
+    if (actor === 'driver') {
+        let students = '';
+        response.data.forEach(element => {
+            students += element.name + '  ';
+            drawStudentOnMap(element);
+        })
+        div.innerHTML = `
+        <h1 class="display-5">Localização atualizada!</h1>
+        <h3 class="lead">Os alunos estão esperando por você:</h3>
+        <p class="lead"><span class="logo-color">${students}</span><p>
+    `;
+    return;
+    }
 }
